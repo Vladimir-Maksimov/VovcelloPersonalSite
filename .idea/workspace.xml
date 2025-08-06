@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ccd734fb-c5d8-4a9e-82d1-77ccd7ae25f7" name="Changes" comment="подтверждаю">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/internetshop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20032025.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20032025_1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internetshop" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internetshop/main/shop/templates/shop/base_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internetshop/main/static/js/1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/main/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/internetshop/main/main/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/internetshop/main/shop/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/internetshop/main/shop/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/migrations/0002_remove_user_attempts.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/migrations/0003_alter_product_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/migrations/0004_alter_product_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/migrations/0005_alter_product_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/migrations/0006_alter_product_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/migrations/0007_alter_product_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/migrations/0008_alter_product_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/internetshop/main/shop/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/internetshop/main/shop/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/templates/registration/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/internetshop/main/shop/templates/registration/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/templates/shop/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/internetshop/main/shop/templates/shop/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/templates/shop/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/internetshop/main/shop/templates/shop/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/templates/shop/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/internetshop/main/shop/templates/shop/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/templates/shop/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/internetshop/main/shop/templates/shop/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/templates/shop/order_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/internetshop/main/shop/templates/shop/order_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/templates/shop/order_success.html" beforeDir="false" afterPath="$PROJECT_DIR$/internetshop/main/shop/templates/shop/order_success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/templates/shop/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/internetshop/main/shop/templates/shop/product_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/templates/shop/product_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/internetshop/main/shop/templates/shop/product_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internetshop/main/shop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/internetshop/main/shop/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/internetshop" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2ixNhwW8xhB9LrMwm7yKpbQLtM1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/PycharmProjects/internetshop&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\PycharmProjects\internetshop\main\static\css" />
+      <recent name="C:\Users\Lenovo\PycharmProjects\internetshop\main\main" />
+      <recent name="C:\Users\Lenovo\PycharmProjects\internetshop\main\shop\templates\registration" />
+      <recent name="C:\Users\Lenovo\PycharmProjects\internetshop\main\shop\templates\shop" />
+      <recent name="C:\Users\Lenovo\PycharmProjects\internetshop\main\shop\templates" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.example">
+    <configuration name="example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="internetshop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main/shop/templates/shop" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/shop/templates/shop/example.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.ViewTest.test_index_view" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="internetshop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main/shop" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.ViewTest.test_index_view&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.example" />
+        <item itemvalue="Python tests.Python tests for tests.ViewTest.test_index_view" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ccd734fb-c5d8-4a9e-82d1-77ccd7ae25f7" name="Changes" comment="" />
+      <created>1720428391734</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720428391734</updated>
+    </task>
+    <task id="LOCAL-00001" summary="подтверждаю">
+      <option name="closed" value="true" />
+      <created>1735573637403</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1735573637403</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="подтверждаю" />
+    <option name="LAST_COMMIT_MESSAGE" value="подтверждаю" />
+  </component>
+</project>

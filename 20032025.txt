@@ -1,0 +1,33 @@
+class New(models.Model):
+    title = models.CharField(max_length=50, verbose_name='Заголовок')
+    description = models.TextField(max_length=500, verbose_name='Текст')
+    datetime = models.DateField(auto_now_add=True, verbose_name='Дата публикации')
+
+    class Meta:
+        verbose_name = 'Новость'
+        verbose_name_plural = 'Новости'
+
+    def __str__(self):
+        return self.title
+
+<div class="container px-4 py-5" id="hanging-icons" style="background-color: rgb(206, 162, 98);">
+        {% for new in news %}
+        <h2 class="pb-2 border-bottom">Новости</h2>
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-125 position-relative" style="background-color: rgb(66, 94, 23);">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <h3 class="mb-0">{{ new.title }}</h3>
+                        <div class="mb-1 custom-text">{{ new.datetime }}</div>
+                        <p class="card-text mb-auto">{{ new.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+def index(request):
+    #Эта функция отображает главную страницу
+    news = New.objects.all()
+    return render(request, 'shop/index.html', {'news':news})

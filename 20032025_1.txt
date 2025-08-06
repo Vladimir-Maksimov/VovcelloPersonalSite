@@ -1,0 +1,138 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import NoSuchElementException, InvalidSelectorException
+import pandas as pd, re
+
+
+class Avito_Data:
+    numbers = []
+    links = []
+    adverts_names = []
+    adverts_prices = []
+    adverts_prices_per_square = []
+    adverts_subjects = []
+    adverts_adress = []
+    adverts_types = []
+    adverts_times = []
+    adverts_subjects_types = []
+    square = []
+    dates = []
+    urls = []
+    save_path = "F:/images"
+
+    def __init__(self, url):
+        self.url = url
+        self.driver = webdriver.Chrome()
+
+        options = webdriver.ChromeOptions()
+        options.add_argument("--headless --disable-images")
+        binary_yandex_driver_file = 'yandexdriver.exe'  # path to YandexDriver
+        service = webdriver.chrome.service.Service(executable_path=binary_yandex_driver_file)
+
+    def close(self):
+        self.driver.quit()
+
+    def get_number_of_pages(self):
+        self.driver.get(self.url)
+        wait = WebDriverWait(self.driver, 30)  # Задаем таймаут 10 секунд
+        wait.until(EC.presence_of_all_elements_located((By.XPATH,'//a[@href]')))
+        pages = self.driver.find_elements(By.XPATH, "//a[@data-value]")
+
+        for page in pages:
+            page_number = page.get_attribute('data-value')
+            Avito_Data.numbers.append(
+                int(page_number))  # Здесь список Avito_Data.numbers означает список найденных страниц, выискивая последнюю
+        print(Avito_Data.numbers)
+
+        return max(Avito_Data.numbers)
+
+    def get_all_hrefs_from_adverts(self):
+        high = self.get_number_of_pages()
+
+        for i in range(1, (high + 1)):
+            self.driver.get(f'{self.url}?p={i}')
+            wait = WebDriverWait(self.driver, 10)  # Задаем таймаут 10 секунд
+            wait.until(EC.presence_of_all_elements_located((By.XPATH, '//a[@href]')))
+            hrefs = self.driver.find_elements(By.XPATH, '//div[@class="iva-item-title-CdRXl"]/a[@href]')
+            dates = self.driver.find_elements(By.XPATH, '//div[@class="iva-item-dateInfoStep-qcDJA"]/div/p')
+
+            for href in hrefs:
+                link = href.get_attribute('href')
+                Avito_Data.links.append(link)
+
+            for date in dates:
+                date = date.text
+                if '2025' or 'назад' or 'вчера' or 'сегодня' in date:
+                    Avito_Data.dates.append(date)
+
+            print(f'Найдено {len(Avito_Data.links)} ссылок на преддожения услуг')
+            print(f'Найдено {len(Avito_Data.dates)} объявлений опубликованных в этом году')
+
+        return Avito_Data.links
+
+
+    def get_information_of_realty(self):
+        try:
+            self.get_all_hrefs_from_adverts()
+            for link in Avito_Data.links:
+                self.driver.get(link)
+                self.driver.implicitly_wait(10)
+
+                names = self.driver.find_element(By.XPATH, '//div[@class="style-title-info-_liyt"]/h1')
+                types = self.driver.find_elements(By.XPATH,
+                                             '//span[@class="breadcrumbs-linkWrapper-jZP0j"]/a[@itemprop="item"]/span')
+                price = self.driver.find_element(By.XPATH,
+                                            '//span[@class="style-price-value-main-TIg6u"]/span')
+                price_per_square = self.driver.find_element(By.XPATH, '//div[@class="style-item-price-sub-price-_5RUD"]/p/span')
+                adress = self.driver.find_element(By.XPATH, '//span[@class="style-item-address__string-wt61A"]')
+
+                list_1 = [elem.text for elem in types]
+                cleaned = re.sub(r'[^\d\s]', '', price_per_square.text)
+                price_per_square_value = float(cleaned.replace(' ', ''))
+                price_value = float(price.get_attribute('content'))
+                square_value = price_value / price_per_square_value
+
+                Avito_Data.adverts_names.append(names.text)
+                Avito_Data.adverts_types.append(list_1[-1])
+                Avito_Data.adverts_prices.append(price.text)
+                Avito_Data.adverts_adress.append(adress.text)
+                Avito_Data.square.append(round(square_value, 1))
+                Avito_Data.adverts_prices_per_square.append(price_per_square.text)
+                Avito_Data.adverts_names.append(names)
+
+                print(f'{Avito_Data.links.index(link)} готова')
+
+            data = {
+                'Название': Avito_Data.adverts_names,
+                'Тип': Avito_Data.adverts_types,
+                'Цена': Avito_Data.adverts_prices,
+                'Цена за м2': Avito_Data.adverts_prices_per_square,
+                'Площадь': Avito_Data.square,
+                'Адрес': Avito_Data.adverts_adress
+            }
+
+            df = pd.DataFrame(data)
+
+            df.to_excel('kupit.xlsx', index=False)
+
+            return df
+        finally:
+            self.close()
+
+    def write_result_to_excel(self, list, name):
+        df = pd.DataFrame(list)
+        writer = pd.ExcelWriter(f'{name}.xlsx', engine='xlsxwriter')
+        df.to_excel(writer, sheet_name='welcome', index=True)
+        writer._save()
+
+
+obj = Avito_Data(
+    url='https://www.avito.ru/ivanovskaya_oblast/kommercheskaya_nedvizhimost/prodam-ASgBAgICAUSwCNJW')
+
+obj.get_information_of_realty()
+#obj.write_result_to_excel(list=needed, name='result')
+# new_list = Data.links, Data.dates, Data.adverts_names, Data.adverts_types, Data.adverts_prices, Data.adverts_prices_per_square, Data.square
+# obj.write_result_to_excel(new_list, name='otchet')
